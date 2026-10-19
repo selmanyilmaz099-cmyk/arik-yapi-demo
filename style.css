@@ -1,14 +1,1116 @@
- :root{--ink:#18272b;--ink-2:#23383d;--teal:#12b9bd;--teal-dark:#087e83;--paper:#f5f7f6;--muted:#667579;--line:#dce4e3;--white:#fff;--max:1240px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.announcement{height:30px;background:#0d2024;color:#b8d5d5;display:flex;align-items:center;justify-content:center;gap:9px;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.dot{width:6px;height:6px;background:var(--teal);border-radius:50%}
-.site-header{height:82px;padding:0 max(5.5vw,24px);display:flex;align-items:center;justify-content:space-between;gap:25px;background:rgba(15,35,39,.98);color:white;position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(255,255,255,.09)}.brand{display:flex;align-items:center;gap:11px;min-width:190px}.brand-mark{font-family:Manrope,sans-serif;font-size:42px;font-weight:800;line-height:1;color:var(--teal);position:relative;letter-spacing:-.12em}.brand-mark span{font-size:11px;position:absolute;right:-10px;top:5px;color:#e7ffff}.brand-copy{display:flex;flex-direction:column;line-height:1.35}.brand-copy strong{font-size:16px;letter-spacing:.14em}.brand-copy small{font-size:9px;color:#afc1c2;letter-spacing:.015em}.main-nav{display:flex;align-items:center;gap:clamp(13px,2vw,27px)}.main-nav a{font-size:12px;color:#d5e0e0;position:relative;padding:31px 0}.main-nav a:after{content:"";height:2px;position:absolute;bottom:21px;left:0;width:0;background:var(--teal);transition:.25s}.main-nav a:hover:after,.main-nav a.active:after{width:100%}.header-cta{font-size:12px;border:1px solid #2e777a;padding:11px 15px;white-space:nowrap}.header-cta span,.button span{margin-left:14px;color:var(--teal)}.menu-toggle{display:none;background:none;border:0;color:white}
-.hero{min-height:650px;position:relative;isolation:isolate;display:flex;align-items:center;background:#122b30;color:white;overflow:hidden}.hero-image,.hero-overlay{position:absolute;inset:0;z-index:-1}.hero-image{background:url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=85") center 53%/cover}.hero-overlay{background:linear-gradient(90deg,rgba(8,25,29,.91) 0%,rgba(9,30,34,.76) 38%,rgba(9,30,34,.2) 100%),linear-gradient(0deg,rgba(7,20,23,.65),transparent 30%)}.hero-content{max-width:var(--max);width:100%;margin:0 auto;padding:70px 35px 115px}.eyebrow{font-size:10px;letter-spacing:.19em;color:var(--teal-dark);font-weight:700;margin:0 0 18px}.eyebrow.light{color:#8be6e5}.eyebrow span{display:inline-block;width:25px;height:1px;background:var(--teal);vertical-align:middle;margin-right:10px}.hero h1{font:500 clamp(45px,6.4vw,83px)/1.06 Manrope,sans-serif;letter-spacing:-.055em;margin:0 0 22px;max-width:750px}.hero h1 em,h2 em{font-style:normal;color:var(--teal)}.hero-lead{max-width:460px;color:#d6e0df;font-size:16px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 19px;font-size:12px;font-weight:700;border:1px solid transparent;transition:transform .2s,background .2s;cursor:pointer}.button:hover{transform:translateY(-2px)}.button-primary{background:var(--teal);color:#08282b}.button-primary span{color:#073b3d}.button-outline{border-color:rgba(255,255,255,.55);color:white}.hero-bottom{position:absolute;left:max(5.5vw,24px);right:max(5.5vw,24px);bottom:0;display:flex;gap:clamp(20px,5vw,75px);padding:22px 0;border-top:1px solid rgba(255,255,255,.23);max-width:var(--max);margin:auto}.hero-bottom>div{display:flex;align-items:center;gap:12px}.feature-icon{width:34px;height:34px;border:1px solid var(--teal);color:var(--teal);border-radius:50%;display:grid;place-items:center;font-size:19px}.hero-bottom strong,.hero-bottom small{display:block}.hero-bottom strong{font-size:11px}.hero-bottom small{font-size:10px;color:#b8c8c8}.hero-index{position:absolute;right:5.5vw;top:50%;font-size:11px;color:#a7b9b9;letter-spacing:.12em}.hero-index span{color:var(--teal)}
-.section-pad{padding:105px max(5.5vw,24px);max-width:1500px;margin:auto}.section-label{display:flex;align-items:center;gap:12px;color:#728183;font-size:10px;letter-spacing:.18em;font-weight:700;margin-bottom:42px}.section-label>span:first-child{color:var(--teal-dark)}.section-label .line{height:1px;width:42px;background:var(--teal)}.intro-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:8%;align-items:start}.intro h2,.section-heading h2,.founder h2,.realestate h2,.contact h2{font:500 clamp(34px,4.2vw,53px)/1.15 Manrope,sans-serif;letter-spacing:-.045em;margin:0}.intro-copy{color:#56666a;font-size:13px}.intro-copy p{margin:0 0 15px}.values-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:60px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.value-card{padding:28px 30px 30px 0;position:relative}.value-card+.value-card{border-left:1px solid var(--line);padding-left:30px}.value-number{font-size:10px;color:#91a0a1;letter-spacing:.1em}.value-icon{font-size:28px;color:var(--teal-dark);margin-top:14px}.value-card h3{font:600 20px Manrope;margin:10px 0}.value-card p{font-size:12px;color:var(--muted);max-width:310px;margin:0}
-.founder{display:grid;grid-template-columns:1fr 1fr;background:var(--ink);color:white;min-height:540px}.founder-photo{min-height:500px;background:url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85") center/cover}.founder-content{padding:65px clamp(30px,7vw,105px);align-self:center}.light-label{color:#a8c0c0}.founder h2{font-size:clamp(38px,4.5vw,56px);margin-bottom:25px}.founder-content>p:not(.eyebrow){font-size:13px;color:#c2d0d0;max-width:540px}.founder-signature{margin-top:35px;padding-top:23px;border-top:1px solid #3b4f52;color:#d6e4e3;font:italic 19px Manrope}.founder-signature strong{color:var(--teal);font-style:normal;letter-spacing:.08em}
-.services{background:#fff}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}.section-heading h2{font-size:clamp(34px,4.3vw,52px)}.heading-note{max-width:290px;font-size:12px;color:var(--muted);margin:0 0 5px}.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.service-card{border:1px solid #e3e9e8;background:#fff}.service-photo{height:260px;position:relative;background-size:cover;background-position:center}.construction-photo{background-image:url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85")}.realestate-photo{background-image:url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85")}.service-photo:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(8,24,27,.68))}.service-photo>span{position:absolute;z-index:1;bottom:20px;left:25px;color:white;font-size:10px;letter-spacing:.15em}.service-body{padding:28px 30px 32px}.service-symbol{color:var(--teal-dark);font-size:25px}.service-body h3{font:600 23px Manrope;margin:8px 0 12px}.service-body p{font-size:12px;color:var(--muted);margin:0 0 20px}.text-link{font-size:11px;font-weight:700;color:var(--teal-dark)}.text-link span{margin-left:12px}
-.projects{background:#10272b;color:white;max-width:none}.projects .section-heading{max-width:1240px;margin-left:auto;margin-right:auto}.projects>.section-label{max-width:1240px;margin-left:auto;margin-right:auto}.light-note{color:#b5c6c6}.project-placeholder{max-width:1240px;margin:0 auto;border:1px solid #3d5558;background:linear-gradient(110deg,rgba(16,39,43,.94),rgba(16,39,43,.76)),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=75") center/cover;min-height:190px;display:flex;align-items:center;gap:24px;padding:35px}.placeholder-icon{height:48px;width:48px;display:grid;place-items:center;border:1px solid var(--teal);color:var(--teal);font-size:26px}.project-placeholder h3{font:600 20px Manrope;margin:0 0 5px}.project-placeholder p{font-size:12px;color:#c2d0d0;margin:0;max-width:600px}.demo-tag{margin-left:auto;border:1px solid #4c6c6f;color:#a8d9d8;padding:7px 10px;font-size:9px;letter-spacing:.15em;white-space:nowrap}
-.realestate-panel{display:grid;grid-template-columns:1fr 1fr;background:#e8efed;min-height:400px}.realestate-copy{padding:55px clamp(25px,5vw,70px);align-self:center}.realestate h2{margin-bottom:20px}.realestate-copy>p:not(.eyebrow){font-size:13px;color:var(--muted);max-width:420px;margin-bottom:25px}.realestate-image{background:url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85") center/cover;min-height:350px}
-.contact{background:#fff}.contact-grid{display:grid;grid-template-columns:1fr .9fr;gap:10%;align-items:start}.contact-copy>p:not(.eyebrow){font-size:13px;color:var(--muted);max-width:400px;margin:25px 0}.contact-note{display:flex;gap:15px;align-items:center;border-top:1px solid var(--line);padding-top:22px;max-width:400px}.contact-note>span{font-size:24px;color:var(--teal-dark)}.contact-note strong,.contact-note small{display:block}.contact-note strong{font-size:12px}.contact-note small{font-size:11px;color:var(--muted)}.contact-form{background:var(--paper);padding:30px}.form-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:20px;font-size:10px;letter-spacing:.16em;font-weight:700}.form-mark{font:800 28px Manrope;color:var(--teal-dark)}.contact-form label{display:block;font-size:11px;font-weight:700;margin:14px 0 6px}.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:12px;border:1px solid #d9e1df;background:white;color:var(--ink);font-size:12px;outline-color:var(--teal)}.contact-form textarea{resize:vertical}.submit-button{width:100%;margin-top:18px}.form-disclaimer,.form-status{font-size:10px;color:#718083}.form-status{color:var(--teal-dark);font-weight:700}
-.site-footer{background:#0b1c1f;color:white;padding:38px max(5.5vw,24px);display:grid;grid-template-columns:1.1fr .8fr 1.5fr;align-items:center;gap:24px}.footer-brand{min-width:0}.site-footer>p{font:italic 15px Manrope;color:#c4d2d1}.site-footer>p strong{color:var(--teal)}.footer-links{display:flex;justify-content:flex-end;gap:18px;flex-wrap:wrap}.footer-links a{font-size:10px;color:#bdcccc}.copyright{grid-column:1/-1;border-top:1px solid #2a3d40;padding-top:17px;color:#819495;font-size:10px}
-@media(max-width:1000px){.main-nav{gap:13px}.main-nav a{font-size:11px}.header-cta{display:none}.site-header{padding:0 25px}.brand{min-width:175px}.hero-index{display:none}.section-pad{padding-top:80px;padding-bottom:80px}.founder-content{padding:45px}.site-footer{grid-template-columns:1fr 1fr}.footer-links{grid-column:1/-1;justify-content:flex-start}.copyright{grid-column:1/-1}}
-@media(max-width:760px){.announcement{font-size:8px;letter-spacing:.08em}.site-header{height:72px;padding:0 20px}.brand-mark{font-size:36px}.brand-copy strong{font-size:14px}.brand-copy small{font-size:8px}.menu-toggle{display:flex;flex-direction:column;gap:5px;margin-left:auto;padding:10px}.menu-toggle span{display:block;width:24px;height:2px;background:white}.main-nav{display:none;position:absolute;top:72px;left:0;right:0;padding:12px 22px 22px;background:#10272b;border-top:1px solid #30474a;flex-direction:column;align-items:stretch;gap:0}.main-nav.open{display:flex}.main-nav a{padding:12px 0;border-bottom:1px solid #263d40;font-size:13px}.main-nav a:after{display:none}.hero{min-height:690px;align-items:flex-start}.hero-image{background-position:58% center}.hero-overlay{background:linear-gradient(90deg,rgba(8,25,29,.86),rgba(9,30,34,.5)),linear-gradient(0deg,rgba(7,20,23,.85),transparent 50%)}.hero-content{padding:100px 23px 185px}.hero h1{font-size:clamp(43px,12vw,62px)}.hero-lead{font-size:14px;max-width:330px}.hero-bottom{left:23px;right:23px;display:grid;grid-template-columns:1fr 1fr;gap:17px 12px;padding:18px 0}.hero-bottom>div:last-child{grid-column:1/-1}.feature-icon{width:30px;height:30px;font-size:16px}.hero-bottom strong{font-size:10px}.hero-bottom small{font-size:9px}.section-pad{padding:68px 22px}.section-label{margin-bottom:30px;font-size:9px}.intro-grid,.contact-grid{grid-template-columns:1fr;gap:25px}.intro h2,.section-heading h2,.realestate h2,.contact h2{font-size:36px}.intro-copy{font-size:12px}.values-grid{grid-template-columns:1fr;margin-top:38px}.value-card,.value-card+.value-card{border-left:0;border-bottom:1px solid var(--line);padding:22px 0}.value-card:last-child{border-bottom:0}.value-icon{margin-top:7px}.value-card h3{font-size:18px;margin:5px 0}.founder{grid-template-columns:1fr}.founder-photo{min-height:270px;background-position:center 55%}.founder-content{padding:35px 23px 45px}.founder h2{font-size:42px}.founder-content>p:not(.eyebrow){font-size:12px}.section-heading{display:block}.heading-note{margin-top:18px}.service-grid{grid-template-columns:1fr;gap:18px}.service-photo{height:220px}.service-body{padding:23px}.service-body h3{font-size:21px}.project-placeholder{padding:25px 20px;align-items:flex-start;flex-wrap:wrap;gap:15px}.project-placeholder>div:nth-child(2){flex:1;min-width:180px}.project-placeholder h3{font-size:17px}.demo-tag{margin-left:63px}.realestate-panel{grid-template-columns:1fr}.realestate-copy{padding:35px 23px}.realestate-image{min-height:245px;grid-row:1}.contact-grid{gap:35px}.contact-form{padding:22px}.site-footer{grid-template-columns:1fr;padding:30px 22px;gap:12px}.site-footer>p{margin:5px 0}.footer-links{grid-column:auto;gap:14px}.copyright{grid-column:auto}.footer-brand{margin-bottom:3px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+/* =====================================================
+   ARIK YAPI — style.css
+   Aşama 1: Renk paleti + Glassmorphism + Odak stilleri
+   ===================================================== */
+
+/* ---------- Değişkenler ---------- */
+:root {
+  --ink:        #10242a;
+  --ink-2:      #1a333a;
+  --teal:       #0fb8bc;
+  --teal-light: #3dd6da;
+  --teal-dark:  #079fa3;
+  --teal-glow:  rgba(15, 184, 188, 0.22);
+  --teal-glass: rgba(15, 184, 188, 0.08);
+  --paper:      #f3f6f6;
+  --muted:      #4e6165;          /* AA kontrastı için koyultuldu */
+  --line:       #d6e0df;
+  --white:      #fff;
+  --max:        1240px;
+
+  /* Cam efekti */
+  --glass-bg:   rgba(10, 30, 35, 0.55);
+  --glass-blur: blur(18px);
+  --glass-border: rgba(15, 184, 188, 0.18);
+}
+
+/* ---------- Reset & Temel ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+
+/* ---------- Klavye odak stilleri ---------- */
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* =====================================================
+   DUYURU BANDI
+   ===================================================== */
+.announcement {
+  height: 32px;
+  background: linear-gradient(90deg, #071419 0%, #0c2027 50%, #071419 100%);
+  color: #9ad4d5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--teal);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--teal);
+  animation: pulse-dot 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* =====================================================
+   HEADER — Glassmorphism
+   ===================================================== */
+.site-header {
+  height: 84px;
+  padding: 0 max(5.5vw, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  /* Cam efekti */
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s;
+}
+
+/* Sayfanın en tepesinde biraz daha opak */
+.site-header.scrolled {
+  background: rgba(8, 22, 27, 0.88);
+}
+
+/* ---------- Logo ---------- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 195px;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  font-family: Manrope, sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--teal);
+  position: relative;
+  letter-spacing: -.12em;
+  text-shadow: 0 0 18px var(--teal-glow);
+}
+
+.brand-mark span {
+  font-size: 11px;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+  color: var(--teal-light);
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.brand-copy strong {
+  font-size: 16px;
+  letter-spacing: .14em;
+}
+
+.brand-copy small {
+  font-size: 9px;
+  color: #9ec0c1;
+  letter-spacing: .015em;
+}
+
+/* ---------- Navigasyon ---------- */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(13px, 2vw, 28px);
+}
+
+.main-nav a {
+  font-size: 12px;
+  color: #cddcdc;
+  position: relative;
+  padding: 31px 0;
+  transition: color .2s;
+}
+
+.main-nav a::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 0;
+  background: var(--teal);
+  box-shadow: 0 0 8px var(--teal-glow);
+  transition: width .25s ease;
+}
+
+.main-nav a:hover {
+  color: var(--teal-light);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+.main-nav a.active {
+  color: var(--teal-light);
+}
+
+.header-cta {
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(15, 184, 188, 0.4);
+  padding: 10px 16px;
+  white-space: nowrap;
+  color: var(--teal-light);
+  transition: background .2s, border-color .2s;
+}
+
+.header-cta:hover {
+  background: var(--teal-glass);
+  border-color: var(--teal);
+}
+
+.header-cta span,
+.button span {
+  margin-left: 14px;
+  color: var(--teal);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+.hero {
+  min-height: 670px;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  background: #0e2830;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-image,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero-image {
+  background: url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80") center 53% / cover;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(6, 20, 24, .93) 0%, rgba(8, 26, 30, .78) 40%, rgba(8, 26, 30, .18) 100%),
+    linear-gradient(0deg, rgba(5, 16, 20, .7), transparent 35%);
+}
+
+.hero-content {
+  max-width: var(--max);
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 35px 120px;
+}
+
+/* ---------- Eyebrow ---------- */
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: .2em;
+  color: var(--teal-dark);
+  font-weight: 700;
+  margin: 0 0 18px;
+}
+
+.eyebrow.light { color: #7de0e1; }
+
+.eyebrow span {
+  display: inline-block;
+  width: 26px;
+  height: 1px;
+  background: var(--teal);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* ---------- Hero başlık ---------- */
+.hero h1 {
+  font: 500 clamp(46px, 6.5vw, 86px) / 1.06 Manrope, sans-serif;
+  letter-spacing: -.055em;
+  margin: 0 0 22px;
+  max-width: 750px;
+}
+
+.hero h1 em,
+h2 em {
+  font-style: normal;
+  color: var(--teal);
+  text-shadow: 0 0 35px rgba(15, 184, 188, 0.35);
+}
+
+.hero-lead {
+  max-width: 470px;
+  color: #cfdedd;
+  font-size: 16px;
+}
+
+/* ---------- Butonlar ---------- */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: transform .2s, background .2s, box-shadow .2s;
+  cursor: pointer;
+  letter-spacing: .04em;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--teal);
+  color: #072427;
+  box-shadow: 0 4px 22px rgba(15, 184, 188, 0.35);
+}
+
+.button-primary:hover {
+  background: var(--teal-light);
+  box-shadow: 0 6px 28px rgba(15, 184, 188, 0.5);
+}
+
+.button-primary span { color: #073b3d; }
+
+.button-outline {
+  border-color: rgba(255, 255, 255, .45);
+  color: white;
+}
+
+.button-outline:hover {
+  border-color: var(--teal);
+  color: var(--teal-light);
+}
+
+/* ---------- Hero alt çubuk ---------- */
+.hero-bottom {
+  position: absolute;
+  left: max(5.5vw, 24px);
+  right: max(5.5vw, 24px);
+  bottom: 0;
+  display: flex;
+  gap: clamp(20px, 5vw, 75px);
+  padding: 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  max-width: var(--max);
+  margin: auto;
+}
+
+.hero-bottom > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  box-shadow: 0 0 12px var(--teal-glow);
+  flex-shrink: 0;
+}
+
+.hero-bottom strong,
+.hero-bottom small { display: block; }
+
+.hero-bottom strong { font-size: 11px; }
+.hero-bottom small  { font-size: 10px; color: #afc8c8; }
+
+.hero-index {
+  position: absolute;
+  right: 5.5vw;
+  top: 50%;
+  font-size: 11px;
+  color: #8aadad;
+  letter-spacing: .12em;
+}
+
+.hero-index span { color: var(--teal); }
+
+/* =====================================================
+   BÖLÜM ORTAK
+   ===================================================== */
+.section-pad {
+  padding: 108px max(5.5vw, 24px);
+  max-width: 1500px;
+  margin: auto;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6a7e80;
+  font-size: 10px;
+  letter-spacing: .18em;
+  font-weight: 700;
+  margin-bottom: 44px;
+}
+
+.section-label > span:first-child { color: var(--teal-dark); }
+
+.section-label .line {
+  height: 1px;
+  width: 44px;
+  background: linear-gradient(90deg, var(--teal), transparent);
+}
+
+.light-label { color: #8ab4b5; }
+
+/* =====================================================
+   KURUMSAL (intro)
+   ===================================================== */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 8%;
+  align-items: start;
+}
+
+.intro h2,
+.section-heading h2,
+.founder h2,
+.realestate h2,
+.contact h2 {
+  font: 500 clamp(34px, 4.2vw, 54px) / 1.15 Manrope, sans-serif;
+  letter-spacing: -.045em;
+  margin: 0;
+}
+
+.intro-copy {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.intro-copy p { margin: 0 0 15px; }
+
+/* ---------- Değer Kartları — Cam efekti ---------- */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 62px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.value-card {
+  padding: 30px 32px 32px 0;
+  position: relative;
+  transition: background .25s;
+}
+
+.value-card:hover {
+  background: rgba(15, 184, 188, 0.04);
+}
+
+.value-card + .value-card {
+  border-left: 1px solid var(--line);
+  padding-left: 32px;
+}
+
+.value-number {
+  font-size: 10px;
+  color: #91a0a1;
+  letter-spacing: .1em;
+}
+
+.value-icon {
+  font-size: 28px;
+  color: var(--teal-dark);
+  margin-top: 14px;
+  text-shadow: 0 0 12px var(--teal-glow);
+}
+
+.value-card h3 {
+  font: 600 20px / 1.3 Manrope;
+  margin: 10px 0;
+  color: var(--ink);
+}
+
+.value-card p {
+  font-size: 12px;
+  color: var(--muted);
+  max-width: 310px;
+  margin: 0;
+}
+
+/* =====================================================
+   KURUCU
+   ===================================================== */
+.founder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--ink);
+  color: white;
+  min-height: 540px;
+}
+
+.founder-photo {
+  min-height: 500px;
+  background: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80") center / cover;
+}
+
+.founder-content {
+  padding: 68px clamp(30px, 7vw, 108px);
+  align-self: center;
+  /* İnce cam tonu */
+  background: linear-gradient(135deg, rgba(15, 184, 188, 0.05) 0%, transparent 60%);
+}
+
+.founder h2 {
+  font-size: clamp(38px, 4.5vw, 58px);
+  margin-bottom: 26px;
+}
+
+.founder-content > p:not(.eyebrow) {
+  font-size: 13px;
+  color: #b8cece;
+  max-width: 540px;
+}
+
+.founder-signature {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(15, 184, 188, 0.2);
+  color: #cce0e0;
+  font: italic 19px / 1.4 Manrope;
+}
+
+.founder-signature strong {
+  color: var(--teal);
+  font-style: normal;
+  letter-spacing: .08em;
+  text-shadow: 0 0 14px var(--teal-glow);
+}
+
+/* =====================================================
+   HİZMETLER
+   ===================================================== */
+.services { background: #fff; }
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 { font-size: clamp(34px, 4.3vw, 53px); }
+
+.heading-note {
+  max-width: 290px;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 5px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+/* ---------- Hizmet kartı — cam kenarlık efekti ---------- */
+.service-card {
+  border: 1px solid #dce8e7;
+  background: #fff;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(15, 184, 188, 0.12);
+}
+
+.service-photo {
+  height: 265px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.construction-photo {
+  background-image: url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=75");
+}
+
+.realestate-photo {
+  background-image: url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=75");
+}
+
+.service-photo::after {
+  content: "";
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, rgba(6, 20, 24, .7));
+}
+
+.service-photo > span {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 26px;
+  color: white;
+  font-size: 10px;
+  letter-spacing: .15em;
+}
+
+.service-body { padding: 30px 32px 34px; }
+
+.service-symbol {
+  color: var(--teal);
+  font-size: 26px;
+  text-shadow: 0 0 10px var(--teal-glow);
+}
+
+.service-body h3 {
+  font: 600 23px / 1.3 Manrope;
+  margin: 10px 0 13px;
+}
+
+.service-body p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+.text-link {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  transition: color .2s;
+}
+
+.text-link:hover { color: var(--teal); }
+.text-link span   { margin-left: 12px; }
+
+/* =====================================================
+   PROJELER
+   ===================================================== */
+.projects {
+  background: #0e2830;
+  color: white;
+  max-width: none;
+}
+
+.projects > .section-label,
+.projects .section-heading {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.light-note { color: #afc6c6; }
+
+/* Glassmorphism proje placeholder */
+.project-placeholder {
+  max-width: 1240px;
+  margin: 0 auto;
+  border: 1px solid rgba(15, 184, 188, 0.2);
+  background:
+    linear-gradient(110deg, rgba(10, 30, 36, 0.85), rgba(10, 30, 36, 0.65)),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=70") center / cover;
+  backdrop-filter: blur(4px);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 38px;
+}
+
+.placeholder-icon {
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  font-size: 28px;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px var(--teal-glow);
+}
+
+.project-placeholder h3 {
+  font: 600 20px / 1.3 Manrope;
+  margin: 0 0 6px;
+}
+
+.project-placeholder p {
+  font-size: 12px;
+  color: #b5c8c8;
+  margin: 0;
+  max-width: 600px;
+}
+
+.demo-tag {
+  margin-left: auto;
+  border: 1px solid rgba(15, 184, 188, 0.3);
+  color: #7acfcf;
+  padding: 7px 11px;
+  font-size: 9px;
+  letter-spacing: .15em;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   GAYRİMENKUL
+   ===================================================== */
+.realestate-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e6eeec;
+  min-height: 410px;
+}
+
+.realestate-copy {
+  padding: 58px clamp(26px, 5vw, 72px);
+  align-self: center;
+}
+
+.realestate h2 { margin-bottom: 20px; }
+
+.realestate-copy > p:not(.eyebrow) {
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 420px;
+  margin-bottom: 26px;
+}
+
+.realestate-image {
+  background: url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=75") center / cover;
+  min-height: 360px;
+}
+
+/* =====================================================
+   İLETİŞİM
+   ===================================================== */
+.contact { background: #fff; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr .9fr;
+  gap: 10%;
+  align-items: start;
+}
+
+.contact-copy > p:not(.eyebrow) {
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 400px;
+  margin: 26px 0;
+}
+
+.contact-note {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 23px;
+  max-width: 400px;
+}
+
+.contact-note > span {
+  font-size: 24px;
+  color: var(--teal-dark);
+}
+
+.contact-note strong,
+.contact-note small { display: block; }
+
+.contact-note strong { font-size: 12px; }
+.contact-note small  { font-size: 11px; color: var(--muted); }
+
+/* ---------- Form — Glassmorphism ---------- */
+.contact-form {
+  background: linear-gradient(135deg, #f0f5f4 0%, #e8f0ef 100%);
+  border: 1px solid var(--line);
+  padding: 32px;
+  box-shadow: 0 4px 30px rgba(15, 184, 188, 0.06);
+}
+
+.form-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-size: 10px;
+  letter-spacing: .16em;
+  font-weight: 700;
+}
+
+.form-mark {
+  font: 800 28px Manrope;
+  color: var(--teal-dark);
+  text-shadow: 0 0 10px var(--teal-glow);
+}
+
+.contact-form label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  margin: 14px 0 6px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cdd8d6;
+  background: white;
+  color: var(--ink);
+  font-size: 12px;
+  outline-color: var(--teal);
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-glow);
+  outline: none;
+}
+
+.contact-form textarea { resize: vertical; }
+
+.submit-button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.form-disclaimer,
+.form-status { font-size: 10px; color: #6a8082; }
+
+.form-status {
+  color: var(--teal-dark);
+  font-weight: 700;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.site-footer {
+  background: #09181c;
+  color: white;
+  padding: 40px max(5.5vw, 24px);
+  display: grid;
+  grid-template-columns: 1.1fr .8fr 1.5fr;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid rgba(15, 184, 188, 0.12);
+}
+
+.footer-brand { min-width: 0; }
+
+.site-footer > p {
+  font: italic 15px / 1.5 Manrope;
+  color: #b8cece;
+}
+
+.site-footer > p strong {
+  color: var(--teal);
+  text-shadow: 0 0 10px var(--teal-glow);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: 10px;
+  color: #b0c2c2;
+  letter-spacing: .04em;
+  transition: color .2s;
+}
+
+.footer-links a:hover { color: var(--teal-light); }
+
+.copyright {
+  grid-column: 1 / -1;
+  border-top: 1px solid #182e32;
+  padding-top: 18px;
+  color: #6e8687;
+  font-size: 10px;
+}
+
+/* =====================================================
+   SCROLL ANİMASYON SINIFLARI (Aşama 2 için hazır)
+   ===================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+
+/* =====================================================
+   RESPONSIVE — Tablet 768px–1000px
+   ===================================================== */
+@media (max-width: 1000px) {
+  .main-nav { gap: 13px; }
+  .main-nav a { font-size: 11px; }
+  .header-cta { display: none; }
+  .site-header { padding: 0 26px; }
+  .brand { min-width: 178px; }
+  .hero-index { display: none; }
+  .section-pad { padding-top: 82px; padding-bottom: 82px; }
+  .founder-content { padding: 46px; }
+  .site-footer { grid-template-columns: 1fr 1fr; }
+  .footer-links { grid-column: 1 / -1; justify-content: flex-start; }
+  .copyright { grid-column: 1 / -1; }
+}
+
+/* Tablet aralığı ek düzeltmeler */
+@media (min-width: 761px) and (max-width: 900px) {
+  .founder { grid-template-columns: 1fr; }
+  .founder-photo { min-height: 320px; }
+  .founder-content { padding: 40px 32px; }
+  .service-grid { gap: 18px; }
+  .intro-grid { gap: 6%; }
+}
+
+/* =====================================================
+   RESPONSIVE — Mobil 760px ve altı
+   ===================================================== */
+@media (max-width: 760px) {
+  .announcement { font-size: 8px; letter-spacing: .08em; }
+
+  .site-header { height: 72px; padding: 0 20px; }
+  .brand-mark { font-size: 36px; }
+  .brand-copy strong { font-size: 14px; }
+  .brand-copy small { font-size: 8px; }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: auto;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    transition: transform .25s, opacity .25s;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    padding: 12px 22px 24px;
+    background: rgba(8, 22, 27, 0.96);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(15, 184, 188, 0.15);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .main-nav.open { display: flex; }
+
+  .main-nav a {
+    padding: 12px 0;
+    border-bottom: 1px solid #223840;
+    font-size: 13px;
+  }
+
+  .main-nav a::after { display: none; }
+
+  /* Hero */
+  .hero { min-height: 700px; align-items: flex-start; }
+  .hero-image { background-position: 58% center; }
+  .hero-overlay {
+    background:
+      linear-gradient(90deg, rgba(6, 20, 24, .88), rgba(8, 26, 30, .5)),
+      linear-gradient(0deg, rgba(5, 16, 20, .85), transparent 50%);
+  }
+  .hero-content { padding: 100px 23px 190px; }
+  .hero h1 { font-size: clamp(42px, 12vw, 62px); }
+  .hero-lead { font-size: 14px; max-width: 330px; }
+  .hero-bottom {
+    left: 23px;
+    right: 23px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px 12px;
+    padding: 18px 0;
+  }
+  .hero-bottom > div:last-child { grid-column: 1 / -1; }
+  .feature-icon { width: 30px; height: 30px; font-size: 16px; }
+  .hero-bottom strong { font-size: 10px; }
+  .hero-bottom small  { font-size: 9px; }
+
+  /* Bölümler */
+  .section-pad { padding: 70px 22px; }
+  .section-label { margin-bottom: 30px; font-size: 9px; }
+
+  .intro-grid,
+  .contact-grid { grid-template-columns: 1fr; gap: 26px; }
+  .intro h2,
+  .section-heading h2,
+  .realestate h2,
+  .contact h2 { font-size: 36px; }
+  .intro-copy { font-size: 12px; }
+
+  .values-grid { grid-template-columns: 1fr; margin-top: 38px; }
+  .value-card,
+  .value-card + .value-card {
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+  }
+  .value-card:last-child { border-bottom: 0; }
+  .value-icon { margin-top: 7px; }
+  .value-card h3 { font-size: 18px; margin: 5px 0; }
+
+  .founder { grid-template-columns: 1fr; }
+  .founder-photo { min-height: 270px; background-position: center 55%; }
+  .founder-content { padding: 36px 23px 46px; }
+  .founder h2 { font-size: 42px; }
+  .founder-content > p:not(.eyebrow) { font-size: 12px; }
+
+  .section-heading { display: block; }
+  .heading-note { margin-top: 18px; }
+
+  .service-grid { grid-template-columns: 1fr; gap: 18px; }
+  .service-photo { height: 225px; }
+  .service-body { padding: 23px; }
+  .service-body h3 { font-size: 21px; }
+
+  .project-placeholder {
+    padding: 26px 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .project-placeholder > div:nth-child(2) { flex: 1; min-width: 180px; }
+  .project-placeholder h3 { font-size: 17px; }
+  .demo-tag { margin-left: 66px; }
+
+  .realestate-panel { grid-template-columns: 1fr; }
+  .realestate-copy { padding: 36px 23px; }
+  .realestate-image { min-height: 250px; grid-row: 1; }
+
+  .contact-grid { gap: 36px; }
+  .contact-form { padding: 22px; }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+    padding: 30px 22px;
+    gap: 12px;
+  }
+  .site-footer > p { margin: 5px 0; }
+  .footer-links { justify-content: flex-start; gap: 14px; }
+  .footer-brand { margin-bottom: 3px; }
+}
+
+/* =====================================================
+   ERİŞİLEBİLİRLİK — hareketi azalt
+   ===================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
