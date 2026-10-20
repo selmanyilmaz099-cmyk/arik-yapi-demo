@@ -1,110 +1,152 @@
-/* =====================================================
-   ARIK YAPI — script.js
-   Aşama 2: Scroll animasyonları + Header scroll efekti
-   ===================================================== */
-
 'use strict';
 
-/* ── prefers-reduced-motion kontrolü ── */
+/* ── prefers-reduced-motion ── */
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ── Yıl ── */
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-/* ── Hamburger Menü ── */
-const toggle = document.querySelector('.menu-toggle');
-const nav    = document.querySelector('.main-nav');
+/* ================================================================
+   INTRO ANİMASYONU
+   ================================================================ */
+(function initIntro() {
+  const overlay = document.getElementById('introOverlay');
+  if (!overlay) return;
 
-toggle.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', String(open));
-  toggle.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
-});
+  /* Reduced motion: animasyonu gösterme */
+  if (prefersReduced) {
+    overlay.classList.add('skip');
+    return;
+  }
 
-nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Menüyü aç');
-  });
-});
+  /* Aynı session'da tekrar oynamasın */
+  if (sessionStorage.getItem('intro_played')) {
+    overlay.classList.add('skip');
+    return;
+  }
 
-/* ── Aktif nav bağlantısı (IntersectionObserver) ── */
-const sections = [...document.querySelectorAll('main section[id]')];
-const navLinks = [...document.querySelectorAll('.main-nav a')];
+  /* ~2 saniye sonra overlay kaldır */
+  setTimeout(() => {
+    overlay.classList.add('exit');
+    /* Transition bitince DOM'dan kaldır */
+    overlay.addEventListener('transitionend', () => {
+      overlay.remove();
+    }, { once: true });
+    sessionStorage.setItem('intro_played', '1');
+  }, 2200);
+})();
 
-const navObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    const id = entry.target.id;
-    navLinks.forEach(link =>
-      link.classList.toggle('active', link.getAttribute('href') === '#' + id)
-    );
-  });
-}, { rootMargin: '-35% 0px -55% 0px' });
+/* ================================================================
+   HEADER — Scroll'da yoğunlaş
+   ================================================================ */
+(function initHeader() {
+  const header = document.getElementById('siteHeader');
+  if (!header) return;
 
-sections.forEach(s => navObserver.observe(s));
+  const onScroll = () => {
+    header.classList.toggle('solid', window.scrollY > 60);
+  };
 
-/* ── Header: scroll'da cam yoğunlaşır ── */
-const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
 
-const onScroll = () => {
-  header.classList.toggle('scrolled', window.scrollY > 60);
-};
+/* ================================================================
+   MOBİL MENÜ
+   ================================================================ */
+(function initMenu() {
+  const toggle = document.getElementById('menuToggle');
+  const nav    = document.getElementById('mainNav');
+  if (!toggle || !nav) return;
 
-window.addEventListener('scroll', onScroll, { passive: true });
-onScroll(); // ilk yüklemede kontrol
-
-/* ── Scroll Animasyonu ── */
-if (!prefersReduced) {
-  /* Animasyon uygulanacak elementleri seç */
-  const revealTargets = [
-    '.section-label',
-    '.intro-grid > div',
-    '.value-card',
-    '.service-card',
-    '.project-placeholder',
-    '.realestate-copy',
-    '.contact-copy',
-    '.contact-form',
-    '.founder-content > *',
-  ];
-
-  const revealEls = document.querySelectorAll(revealTargets.join(', '));
-
-  /* Gecikme sınıfları: aynı ebeveyn içindeki kardeşlere sıralı gecikme */
-  revealEls.forEach(el => {
-    el.classList.add('reveal');
-
-    /* Kardeş indexine göre gecikme ekle (max 3 adım) */
-    const siblings = [...(el.parentElement?.children ?? [])].filter(c =>
-      c.classList.contains('reveal')
-    );
-    const idx = siblings.indexOf(el);
-    if (idx === 1) el.classList.add('reveal-delay-1');
-    if (idx === 2) el.classList.add('reveal-delay-2');
-    if (idx >= 3)  el.classList.add('reveal-delay-3');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
   });
 
-  const revealObserver = new IntersectionObserver(entries => {
+  /* Menüdeki bağlantıya tıklayınca kapat */
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Menüyü aç');
+    });
+  });
+
+  /* Dışarı tıklayınca kapat */
+  document.addEventListener('click', e => {
+    if (nav.classList.contains('open') &&
+        !nav.contains(e.target) &&
+        !toggle.contains(e.target)) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+
+/* ================================================================
+   AKTİF NAV BAĞLANTISI — IntersectionObserver
+   ================================================================ */
+(function initActiveNav() {
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const navLinks = [...document.querySelectorAll('.main-nav a')];
+  if (!sections.length || !navLinks.length) return;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id;
+      navLinks.forEach(link =>
+        link.classList.toggle('active', link.getAttribute('href')?.includes('#' + id) ||
+          (id === 'ana-sayfa' && link.getAttribute('href') === 'index.html'))
+      );
+    });
+  }, { rootMargin: '-35% 0px -55% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+})();
+
+/* ================================================================
+   SCROLL REVEAL ANİMASYONLARI
+   ================================================================ */
+(function initReveal() {
+  if (prefersReduced) return;
+
+  const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  if (!els.length) return;
+
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target); /* bir kez çalıştır */
+        observer.unobserve(entry.target);
       }
     });
-  }, { rootMargin: '0px 0px -80px 0px', threshold: 0.12 });
+  }, {
+    rootMargin: '0px 0px -72px 0px',
+    threshold: 0.1
+  });
 
-  revealEls.forEach(el => revealObserver.observe(el));
-}
+  els.forEach(el => observer.observe(el));
+})();
 
-/* ── İletişim Formu ── */
-document.getElementById('contactForm').addEventListener('submit', event => {
-  event.preventDefault();
-  const name   = document.getElementById('name').value.trim();
-  const status = document.querySelector('.form-status');
-  status.textContent =
-    `Teşekkürler ${name}. Bu demo formu mesaj göndermiyor; ` +
-    `yayına almadan önce firma e-postası veya form servisi (Formspree vb.) bağlanmalı.`;
-  status.setAttribute('role', 'alert');
-});
+/* ================================================================
+   İLETİŞİM FORMU
+   ================================================================ */
+(function initForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name   = (document.getElementById('name')?.value || '').trim();
+    const status = form.querySelector('.form-status');
+    if (!status) return;
+    status.textContent =
+      `Teşekkürler${name ? ', ' + name : ''}. Bu demo formu mesaj göndermiyor; ` +
+      `form servisi (Formspree, Web3Forms vb.) bağlandıktan sonra aktif olacaktır.`;
+    status.setAttribute('role', 'alert');
+  });
+})();

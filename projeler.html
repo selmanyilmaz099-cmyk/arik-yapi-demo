@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10C8C3">
+  <meta name="description" content="Arık Yapı Projeler — Çok yakında. Yeni projelerimizi yakında keşfedin.">
+  <title>Projeler | Arık Yapı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="announcement">
+    <span class="dot"></span>
+    İnşaat ve gayrimenkulde profesyonel yaklaşım
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html" aria-label="Arık Yapı ana sayfa">
+      <svg class="brand-icon" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <polygon class="b-diamond" points="19,2 36,19 19,36 2,19"/>
+        <circle class="b-dot" cx="19" cy="19" r="3"/>
+      </svg>
+      <span class="brand-copy">
+        <strong>ARIK YAPI</strong>
+        <small>Yapıdan değere, bugünden geleceğe.</small>
+      </span>
+    </a>
+    <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Ana menü">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="kurumsal.html">Kurumsal</a>
+      <a href="insaat.html">İnşaat</a>
+      <a class="active" href="projeler.html">Projeler</a>
+      <a href="gayrimenkul.html">Gayrimenkul</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+    <a class="header-cta" href="iletisim.html">İletişime Geç ↗</a>
+  </header>
+
+  <main>
+    <section class="projects-coming" aria-label="Projeler yakında">
+
+      <!-- Işık geçişi -->
+      <div class="projects-light" aria-hidden="true"></div>
+
+      <!-- SVG Mimari Silüet -->
+      <div class="projects-svg-wrap" aria-hidden="true">
+        <svg class="projects-silhouette" viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sol bina -->
+          <polyline class="sil-building" points="
+            20,180 20,60 50,60 50,40 80,40 80,20 110,20 110,180
+          "/>
+          <!-- Orta yüksek bina -->
+          <polyline class="sil-building" style="animation-delay:.15s" points="
+            115,180 115,10 145,10 145,50 160,50 160,180
+          "/>
+          <!-- Sağ bina -->
+          <polyline class="sil-building" style="animation-delay:.3s" points="
+            165,180 165,55 195,55 195,35 220,35 220,70 250,70 250,180
+          "/>
+          <!-- Zemin çizgisi -->
+          <line class="sil-building" style="stroke-dasharray:280;stroke-dashoffset:280;animation-delay:.5s" x1="10" y1="180" x2="270" y2="180"/>
+          <!-- Pencere ızgaraları -->
+          <line class="sil-window" x1="30" y1="75" x2="70" y2="75"/>
+          <line class="sil-window" x1="30" y1="95" x2="70" y2="95"/>
+          <line class="sil-window" x1="30" y1="115" x2="70" y2="115"/>
+          <line class="sil-window" x1="122" y1="25" x2="138" y2="25"/>
+          <line class="sil-window" x1="122" y1="38" x2="138" y2="38"/>
+          <line class="sil-window" x1="175" y1="68" x2="210" y2="68"/>
+          <line class="sil-window" x1="175" y1="82" x2="210" y2="82"/>
+        </svg>
+      </div>
+
+      <div class="section-label reveal" style="justify-content:center">
+        <span class="num">04</span>
+        <span class="dash"></span>
+        PROJELER
+      </div>
+
+      <h2 class="reveal">
+        Yeni projelerimiz<br><em>çok yakında.</em>
+      </h2>
+
+      <p class="reveal reveal-d1">
+        Arık Yapı projelerini yakında keşfedin. Gerçek proje fotoğrafları ve portföy bilgileri eklendiğinde bu alan portföy galerisine dönüşecek.
+      </p>
+
+      <div class="projects-actions reveal reveal-d2">
+        <a class="btn btn-primary btn-arrow" href="iletisim.html">Proje Hakkında Bilgi Alın</a>
+        <a class="btn btn-outline" href="index.html">Ana Sayfaya Dön</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer" aria-label="Site alt bilgisi">
+    <div class="footer-about">
+      <a class="brand" href="index.html">
+        <svg class="brand-icon" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon class="b-diamond" points="19,2 36,19 19,36 2,19"/>
+          <circle class="b-dot" cx="19" cy="19" r="3"/>
+        </svg>
+        <span class="brand-copy">
+          <strong>ARIK YAPI</strong>
+          <small>Yapıdan değere, bugünden geleceğe.</small>
+        </span>
+      </a>
+      <p>İnşaat ve gayrimenkul alanlarında planlı, nitelikli ve profesyonel yaklaşım.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Sayfalar</div>
+      <ul class="footer-links-list">
+        <li><a href="kurumsal.html">Kurumsal</a></li>
+        <li><a href="insaat.html">İnşaat</a></li>
+        <li><a href="projeler.html">Projeler</a></li>
+        <li><a href="gayrimenkul.html">Gayrimenkul</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">İletişim</div>
+      <ul class="footer-links-list">
+        <li><a href="iletisim.html">İletişim Formu</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-tagline">İşin sonunda <strong>ARIK</strong> var.</p>
+      <small class="copyright">© <span id="year"></span> Arık Yapı. Tüm hakları saklıdır.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

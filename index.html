@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0fb8bc">
+  <meta name="theme-color" content="#10C8C3">
   <meta name="description" content="Arık Yapı — Yapıdan değere, bugünden geleceğe. İnşaat ve gayrimenkul.">
   <meta property="og:title" content="Arık Yapı | Yapıdan değere, bugünden geleceğe">
   <meta property="og:description" content="İnşaat ve gayrimenkul alanlarında planlı, nitelikli ve profesyonel yaklaşım.">
@@ -15,141 +15,309 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="announcement"><span class="dot"></span> İnşaat ve gayrimenkulde profesyonel yaklaşım</div>
-  <header class="site-header">
-    <a class="brand" href="#ana-sayfa" aria-label="Arık Yapı ana sayfa">
-      <span class="brand-mark">A<span>◆</span></span>
-      <span class="brand-copy"><strong>ARIK YAPI</strong><small>Yapıdan değere, bugünden geleceğe.</small></span>
+
+  <!-- ══ INTRO OVERLAY ══ -->
+  <div class="intro-overlay" id="introOverlay" aria-hidden="true">
+    <div class="intro-svg-wrap">
+      <svg class="intro-svg" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+        <!-- Diamond çerçeve -->
+        <polygon class="intro-diamond"
+          points="55,4 106,55 55,106 4,55"
+          fill="none" stroke="#10C8C3" stroke-width="1.2"/>
+        <!-- Yatay çizgi -->
+        <line class="intro-cross-h" x1="4" y1="55" x2="106" y2="55" stroke="#10C8C3"/>
+        <!-- Dikey çizgi -->
+        <line class="intro-cross-v" x1="55" y1="4" x2="55" y2="106" stroke="#10C8C3"/>
+        <!-- Merkez -->
+        <circle class="intro-center-dot" cx="55" cy="55" r="3.5" fill="#10C8C3"/>
+      </svg>
+      <div class="intro-sweep"></div>
+    </div>
+    <div class="intro-brand-wrap">
+      <strong class="intro-brand-name">ARIK YAPI</strong>
+      <small class="intro-brand-tag">Yapıdan değere, bugünden geleceğe.</small>
+    </div>
+  </div>
+
+  <!-- ══ DUYURU ══ -->
+  <div class="announcement">
+    <span class="dot"></span>
+    İnşaat ve gayrimenkulde profesyonel yaklaşım
+  </div>
+
+  <!-- ══ HEADER ══ -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html" aria-label="Arık Yapı ana sayfa">
+      <svg class="brand-icon" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <polygon class="b-diamond" points="19,2 36,19 19,36 2,19"/>
+        <circle class="b-dot" cx="19" cy="19" r="3"/>
+      </svg>
+      <span class="brand-copy">
+        <strong>ARIK YAPI</strong>
+        <small>Yapıdan değere, bugünden geleceğe.</small>
+      </span>
     </a>
-    <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false"><span></span><span></span></button>
-    <nav class="main-nav" aria-label="Ana menü">
-      <a class="active" href="#ana-sayfa">Ana Sayfa</a>
-      <a href="#kurumsal">Kurumsal</a>
-      <a href="#insaat">İnşaat</a>
-      <a href="#projeler">Projeler</a>
-      <a href="#gayrimenkul">Gayrimenkul</a>
-      <a href="#iletisim">İletişim</a>
+
+    <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Ana menü">
+      <a class="active" href="index.html">Ana Sayfa</a>
+      <a href="kurumsal.html">Kurumsal</a>
+      <a href="insaat.html">İnşaat</a>
+      <a href="projeler.html">Projeler</a>
+      <a href="gayrimenkul.html">Gayrimenkul</a>
+      <a href="iletisim.html">İletişim</a>
     </nav>
-    <a class="header-cta" href="#iletisim">İletişime Geç <span>↗</span></a>
+
+    <a class="header-cta" href="iletisim.html">İletişime Geç ↗</a>
   </header>
 
   <main>
-    <section class="hero" id="ana-sayfa">
-      <div class="hero-image"></div><div class="hero-overlay"></div>
+    <!-- ══ HERO ══ -->
+    <section class="hero" id="ana-sayfa" aria-label="Ana sayfa hero">
+
+      <!-- Arka plan (fixed parallax hissi) -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-bg-img"></div>
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <!-- Sol İçerik -->
       <div class="hero-content">
-        <p class="eyebrow light"><span></span> ARIK YAPI · İNŞAAT & GAYRİMENKUL</p>
-        <h1>Yapıdan değere,<br>bugünden <em>geleceğe.</em></h1>
-        <p class="hero-lead">İnşaat ve gayrimenkul alanlarında planlı, nitelikli ve profesyonel bir yaklaşım.</p>
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-line"></span>
+          ARIK YAPI · İNŞAAT &amp; GAYRİMENKUL
+        </div>
+
+        <h1>
+          Yapıdan değere,<br>
+          bugünden <em>geleceğe.</em>
+        </h1>
+
+        <p class="hero-desc">
+          İnşaat ve gayrimenkul alanlarında planlı, nitelikli<br>ve profesyonel bir yaklaşım.
+        </p>
+
         <div class="hero-actions">
-          <a class="button button-primary" href="#kurumsal">Arık Yapı'yı Tanıyın <span>↗</span></a>
-          <a class="button button-outline" href="#faaliyet">Faaliyet Alanlarımız</a>
+          <a class="btn btn-primary btn-arrow" href="projeler.html">Projelerimizi İnceleyin</a>
+          <a class="btn btn-outline" href="iletisim.html">İletişime Geçin</a>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span class="scroll-line"></span>
+          Aşağı kaydırın
         </div>
       </div>
-      <div class="hero-bottom">
-        <div><span class="feature-icon">↗</span><span><strong>Planlı Yaklaşım</strong><small>Her aşamada özen</small></span></div>
-        <div><span class="feature-icon">⌂</span><span><strong>Yapı Üretimi</strong><small>İşlev ve mimari bütünlük</small></span></div>
-        <div><span class="feature-icon">◇</span><span><strong>Profesyonel İletişim</strong><small>Şeffaf ve sorumlu süreç</small></span></div>
+
+      <!-- Sağ — Cam Kart -->
+      <aside class="hero-glass-card" aria-label="Hizmet özeti">
+        <div class="glass-card-header">
+          <span>Hizmet Alanları</span>
+          <span class="glass-card-mark">A◆</span>
+        </div>
+
+        <div class="glass-service">
+          <div class="glass-service-icon" aria-hidden="true">▦</div>
+          <div class="glass-service-text">
+            <strong>İnşaat ve Yapı Üretimi</strong>
+            <span>Planlı, işlevsel ve mimari bütünlük odaklı yapı üretimi.</span>
+          </div>
+        </div>
+
+        <div class="glass-service">
+          <div class="glass-service-icon" aria-hidden="true">⌂</div>
+          <div class="glass-service-text">
+            <strong>Gayrimenkul Satışı</strong>
+            <span>Konut ve ticari alanlarda profesyonel danışmanlık.</span>
+          </div>
+        </div>
+
+        <a class="glass-card-cta" href="iletisim.html">
+          Görüşme Talep Edin <span>↗</span>
+        </a>
+      </aside>
+
+      <!-- Alt Şerit -->
+      <div class="hero-strip" aria-label="Öne çıkan özellikler">
+        <div class="hero-strip-item">
+          <div class="strip-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="strip-text">
+            <strong>Planlı Yaklaşım</strong>
+            <span>Her aşamada özen ve disiplin</span>
+          </div>
+        </div>
+        <div class="hero-strip-item">
+          <div class="strip-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="strip-text">
+            <strong>Nitelikli Yapım</strong>
+            <span>İşlev ve mimari bütünlük</span>
+          </div>
+        </div>
+        <div class="hero-strip-item">
+          <div class="strip-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="strip-text">
+            <strong>Profesyonel İletişim</strong>
+            <span>Şeffaf ve sorumlu süreç</span>
+          </div>
+        </div>
       </div>
-      <div class="hero-index"><span>01</span> / 06</div>
+
     </section>
 
-    <section class="intro section-pad" id="kurumsal">
-      <div class="section-label"><span>01</span><span class="line"></span><span>KURUMSAL</span></div>
-      <div class="intro-grid">
+    <!-- ══ KURUMSAL ÖZET ══ -->
+    <section class="about-section" id="kurumsal">
+      <div class="about-visual reveal-left">
+        <div class="about-img-fallback" role="img" aria-label="Modern mimari yapı"></div>
+        <div class="about-badge">
+          <strong>Arık</strong>
+          <span>İşin sonunda</span>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="section-label reveal">
+          <span class="num">01</span>
+          <span class="dash"></span>
+          KURUMSAL
+        </div>
+        <div class="eyebrow reveal">Arık Yapı Hakkında</div>
+        <h2 class="section-title reveal">
+          Güvenle kurulan,<br><em>değerle büyüyen</em> bir yaklaşım.
+        </h2>
+        <p class="about-text reveal reveal-d1">
+          Arık Yapı, inşaat ve gayrimenkul alanlarında faaliyet gösteren, yapı üretimini ve gayrimenkul satışını bütüncül bir iş anlayışıyla ele alan bir markadır.
+        </p>
+        <p class="about-text reveal reveal-d2">
+          Yapıların tasarımından hayata geçirilmesine uzanan süreçlerde nitelik ve kullanım ihtiyaçlarını gözeten; gayrimenkul satışında doğru bilgilendirme ve profesyonel iletişimi esas alan bir yaklaşımla çalışıyoruz.
+        </p>
+
+        <div class="about-values reveal reveal-d2">
+          <div class="about-value">
+            <div class="about-value-icon">◎</div>
+            <h4>Misyonumuz</h4>
+            <p>İşlevsel ve nitelikli yapılar; ihtiyaçlara uygun seçenekler ve profesyonel satış süreçleri.</p>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">⌁</div>
+            <h4>Vizyonumuz</h4>
+            <p>Çağdaş yapı anlayışı ile sektörde tercih edilen, güçlü kurumsal kimliğe sahip marka.</p>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">◇</div>
+            <h4>İş Anlayışımız</h4>
+            <p>Planlama, kalite, şeffaflık ve sorumluluk ilkelerini tüm faaliyetlerin merkezinde tutmak.</p>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">▦</div>
+            <h4>Yaklaşımımız</h4>
+            <p>İnşaat ve gayrimenkulü ortak bir kalite anlayışıyla bütüncül biçimde ele almak.</p>
+          </div>
+        </div>
+
+        <a class="btn btn-outline reveal reveal-d3" href="kurumsal.html">Daha Fazla Bilgi Alın ↗</a>
+      </div>
+    </section>
+
+    <!-- ══ HİZMETLER ══ -->
+    <section class="services-section" id="hizmetler">
+      <div class="services-header">
         <div>
-          <p class="eyebrow">ARIK YAPI HAKKINDA</p>
-          <h2>Güvenle kurulan,<br><em>değerle büyüyen</em> bir yaklaşım.</h2>
+          <div class="section-label reveal">
+            <span class="num">02</span>
+            <span class="dash"></span>
+            HİZMET ALANLARIMIZ
+          </div>
+          <h2 class="section-title reveal">
+            İhtiyaçlara odaklı,<br><em>değer üreten</em> işler.
+          </h2>
         </div>
-        <div class="intro-copy">
-          <p>Arık Yapı, inşaat ve gayrimenkul alanlarında faaliyet gösteren, yapı üretimini ve gayrimenkul satışını bütüncül bir iş anlayışıyla ele alan bir markadır.</p>
-          <p>İnşaat faaliyetlerimizde planlama, işlevsellik, mimari yaklaşım ve uygulama süreçlerini önemserken; gayrimenkul alanında farklı ihtiyaç ve beklentilere yönelik seçeneklerin değerlendirilmesine odaklanıyoruz.</p>
-          <p>Yapıların tasarımından hayata geçirilmesine uzanan süreçlerde nitelik ve kullanım ihtiyaçlarını gözetiyor, gayrimenkul satışında ise doğru bilgilendirme ve profesyonel iletişimi esas alıyoruz.</p>
-          <p>Arık Yapı olarak hedefimiz; faaliyetlerimizi ortak bir kalite anlayışı etrafında birleştirmek, her aşamada planlı ve sorumlu bir çalışma yaklaşımı ortaya koymaktır.</p>
-        </div>
+        <p class="services-note reveal reveal-d1">
+          İnşaat ve gayrimenkulü ortak bir kalite anlayışıyla ele alıyoruz.
+        </p>
       </div>
-      <div class="values-grid">
-        <article class="value-card"><span class="value-number">01</span><div class="value-icon">◎</div><h3>Misyonumuz</h3><p>İşlevsel, nitelikli ve çağdaş yapılar; ihtiyaçlara uygun seçenekler ve profesyonel satış süreçleri sunmak.</p></article>
-        <article class="value-card"><span class="value-number">02</span><div class="value-icon">⌁</div><h3>Vizyonumuz</h3><p>Çağdaş yapı anlayışı ve güçlü kurumsal kimliğiyle sektörde tercih edilen bir marka olmak.</p></article>
-        <article class="value-card"><span class="value-number">03</span><div class="value-icon">◇</div><h3>İş Anlayışımız</h3><p>Planlama, kalite, şeffaflık ve sorumluluk ilkelerini tüm faaliyetlerimizin merkezinde tutmak.</p></article>
-      </div>
-    </section>
 
-    <section class="founder">
-      <div class="founder-photo" role="img" aria-label="Modern mimari yapı fotoğrafı"></div>
-      <div class="founder-content">
-        <div class="section-label light-label"><span>02</span><span class="line"></span><span>KURUCUMUZ</span></div>
-        <p class="eyebrow light">ARIK YAPI'NIN ARKASINDAKİ VİZYON</p>
-        <h2>İbrahim <em>Arık</em></h2>
-        <p>İnşaat ve gayrimenkul sektöründeki deneyimi ve iş anlayışıyla İbrahim Arık, Arık Yapı’nın kuruluşuna yön veren isimdir.</p>
-        <p>Yapı üretimi ve gayrimenkul alanlarını bir bütün olarak ele alan yaklaşımı; planlama, kalite ve profesyonelliği esas alan bir marka anlayışının temelini oluşturur.</p>
-        <p>Arık Yapı’nın vizyonu, inşaat ve gayrimenkul alanlarında nitelikli işler ortaya koymak, güvene dayalı iş ilişkileri geliştirmek ve kalıcı bir marka değeri oluşturmaktır.</p>
-        <div class="founder-signature">İşin sonunda <strong>ARIK</strong> var.</div>
-      </div>
-    </section>
-
-    <section class="services section-pad" id="faaliyet">
-      <div class="section-label"><span>03</span><span class="line"></span><span>FAALİYET ALANLARIMIZ</span></div>
-      <div class="section-heading">
-        <div><p class="eyebrow">UZMANLIK ALANLARIMIZ</p><h2>İhtiyaçlara odaklı,<br><em>değer üreten</em> işler.</h2></div>
-        <p class="heading-note">İnşaat ve gayrimenkulü ortak bir kalite anlayışıyla ele alıyoruz.</p>
-      </div>
-      <div class="service-grid">
-        <article class="service-card" id="insaat">
-          <div class="service-photo construction-photo"><span>01 / YAPI ÜRETİMİ</span></div>
-          <div class="service-body"><div class="service-symbol">▦</div><h3>İnşaat ve Yapı Üretimi</h3><p>Yapıların planlama ve uygulama süreçlerinde işlevsellik, mimari bütünlük ve nitelikli işçilik anlayışını gözetiyoruz. Amacımız, kullanım ihtiyaçlarına cevap veren ve çağdaş yapı yaklaşımını yansıtan projeler ortaya koymak.</p><a href="#iletisim" class="text-link">İş birliği için iletişime geçin <span>↗</span></a></div>
+      <div class="services-grid">
+        <article class="service-card service-card-1 reveal" id="insaat">
+          <div class="service-card-bg" role="img" aria-label="İnşaat ve yapı üretimi görseli"></div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-num">01 / YAPI ÜRETİMİ</div>
+            <h3>İnşaat ve<br>Yapı Üretimi</h3>
+            <p>Yapıların planlama ve uygulama süreçlerinde işlevsellik, mimari bütünlük ve nitelikli işçilik anlayışını gözetiyoruz.</p>
+            <a class="service-link" href="insaat.html">Daha Fazla Bilgi</a>
+          </div>
         </article>
-        <article class="service-card" id="gayrimenkul">
-          <div class="service-photo realestate-photo"><span>02 / GAYRİMENKUL</span></div>
-          <div class="service-body"><div class="service-symbol">⌂</div><h3>Gayrimenkul Satışı</h3><p>Konut ve diğer gayrimenkul seçeneklerini farklı ihtiyaçlar doğrultusunda değerlendiriyor; satış süreçlerinde doğru bilgilendirme, şeffaf iletişim ve profesyonel yaklaşımı önemsiyoruz.</p><a href="#iletisim" class="text-link">Gayrimenkul hakkında görüşün <span>↗</span></a></div>
+
+        <article class="service-card service-card-2 reveal reveal-d1" id="gayrimenkul">
+          <div class="service-card-bg" role="img" aria-label="Gayrimenkul satış görseli"></div>
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <div class="service-num">02 / GAYRİMENKUL</div>
+            <h3>Gayrimenkul<br>Satışı</h3>
+            <p>Konut ve ticari gayrimenkul seçeneklerinde doğru bilgilendirme, şeffaf iletişim ve profesyonel süreç yönetimi.</p>
+            <a class="service-link" href="gayrimenkul.html">Daha Fazla Bilgi</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="projects section-pad" id="projeler">
-      <div class="section-label light-label"><span>04</span><span class="line"></span><span>PROJELER</span></div>
-      <div class="section-heading">
-        <div><p class="eyebrow light">PROJELERİMİZ</p><h2>Her yapıda bir fikir,<br><em>her fikirde bir değer.</em></h2></div>
-        <p class="heading-note light-note">Arık Yapı'nın proje portföyü bu alanda sergilenecek.</p>
-      </div>
-      <div class="project-placeholder">
-        <div class="placeholder-icon">＋</div>
-        <div><h3>Projeleriniz burada hayat bulacak.</h3><p>Gerçek proje fotoğrafları, proje adları ve konum bilgileri eklendiğinde bu alan portföy galerisine dönüşebilir.</p></div>
-        <span class="demo-tag">DEMO ALANI</span>
-      </div>
-    </section>
+    <!-- ══ CTA ══ -->
+    <div class="cta-band reveal">
+      <h2>Bir sonraki adımınız<br><em>burada başlasın.</em></h2>
+      <a class="btn btn-primary btn-arrow" href="iletisim.html">Bizimle İletişime Geçin</a>
+    </div>
 
-    <section class="realestate section-pad">
-      <div class="section-label"><span>05</span><span class="line"></span><span>GAYRİMENKUL</span></div>
-      <div class="realestate-panel">
-        <div class="realestate-copy"><p class="eyebrow">DOĞRU SEÇENEK, GÜVENLİ İLETİŞİM</p><h2>Yeni bir başlangıç<br><em>için doğru yer.</em></h2><p>Konut ve diğer gayrimenkul seçeneklerini ihtiyaçlarınız doğrultusunda değerlendirmek için Arık Yapı ile iletişime geçin.</p><a class="button button-primary" href="#iletisim">Bize Ulaşın <span>↗</span></a></div>
-        <div class="realestate-image"></div>
-      </div>
-    </section>
-
-    <section class="contact section-pad" id="iletisim">
-      <div class="section-label"><span>06</span><span class="line"></span><span>İLETİŞİM</span></div>
-      <div class="contact-grid">
-        <div class="contact-copy"><p class="eyebrow">BİRLİKTE DEĞER ÜRETELİM</p><h2>Bir sonraki adımınız<br><em>burada başlasın.</em></h2><p>İnşaat ve gayrimenkul alanlarındaki talepleriniz için bizimle iletişime geçin.</p><div class="contact-note"><span>↗</span><div><strong>Arık Yapı ile tanışın</strong><small>Telefon, e-posta ve adres bilgileri firma tarafından eklenecektir.</small></div></div></div>
-        <form class="contact-form" id="contactForm">
-          <div class="form-top"><span>İLETİŞİM FORMU</span><span class="form-mark">A.</span></div>
-          <label for="name">Adınız Soyadınız</label><input id="name" name="name" placeholder="Adınızı girin" required>
-          <label for="email">E-posta Adresiniz</label><input id="email" name="email" type="email" placeholder="ornek@eposta.com" required>
-          <label for="subject">İlgilendiğiniz konu</label><select id="subject" name="subject"><option>Genel bilgi</option><option>İnşaat ve yapı üretimi</option><option>Gayrimenkul satışı</option><option>İş birliği</option></select>
-          <label for="message">Mesajınız</label><textarea id="message" name="message" rows="4" placeholder="Size nasıl yardımcı olabiliriz?" required></textarea>
-          <button class="button button-primary submit-button" type="submit">Mesajı Hazırla <span>↗</span></button>
-          <p class="form-disclaimer">Demo formudur; gerçek mesaj gönderimi için firma e-posta adresi ve form servisi bağlanmalıdır.</p>
-          <p class="form-status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
   </main>
 
-  <footer class="site-footer">
-    <a class="brand footer-brand" href="#ana-sayfa"><span class="brand-mark">A<span>◆</span></span><span class="brand-copy"><strong>ARIK YAPI</strong><small>Yapıdan değere, bugünden geleceğe.</small></span></a>
-    <p>İşin sonunda <strong>ARIK</strong> var.</p>
-    <div class="footer-links"><a href="#kurumsal">Kurumsal</a><a href="#insaat">İnşaat</a><a href="#projeler">Projeler</a><a href="#gayrimenkul">Gayrimenkul</a><a href="#iletisim">İletişim</a></div>
-    <small class="copyright">© <span id="year"></span> Arık Yapı. Tüm hakları saklıdır.</small>
+  <!-- ══ FOOTER ══ -->
+  <footer class="site-footer" aria-label="Site alt bilgisi">
+    <div class="footer-about">
+      <a class="brand" href="index.html" aria-label="Arık Yapı">
+        <svg class="brand-icon" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon class="b-diamond" points="19,2 36,19 19,36 2,19"/>
+          <circle class="b-dot" cx="19" cy="19" r="3"/>
+        </svg>
+        <span class="brand-copy">
+          <strong>ARIK YAPI</strong>
+          <small>Yapıdan değere, bugünden geleceğe.</small>
+        </span>
+      </a>
+      <p>İnşaat ve gayrimenkul alanlarında planlı, nitelikli ve profesyonel yaklaşım.</p>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Sayfalar</div>
+      <ul class="footer-links-list">
+        <li><a href="kurumsal.html">Kurumsal</a></li>
+        <li><a href="insaat.html">İnşaat</a></li>
+        <li><a href="projeler.html">Projeler</a></li>
+        <li><a href="gayrimenkul.html">Gayrimenkul</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">İletişim</div>
+      <ul class="footer-links-list">
+        <li><a href="iletisim.html">İletişim Formu</a></li>
+        <li><a href="iletisim.html">Hakkımızda</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-tagline">İşin sonunda <strong>ARIK</strong> var.</p>
+      <small class="copyright">© <span id="year"></span> Arık Yapı. Tüm hakları saklıdır.</small>
+    </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
