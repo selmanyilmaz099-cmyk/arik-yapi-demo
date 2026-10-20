@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none">
+  <!-- Arık Yapı Orijinal Amblem -->
+  <!-- Dış Çatı -->
+  <polygon class="logo-roof" points="511,231 946,794 788,764 511,388 234,764 58,794" fill="#10C8C3" stroke="#10C8C3" stroke-width="2" stroke-linejoin="miter"/>
+  <!-- Sütun 1 (Sol) -->
+  <polygon class="logo-col-1" points="320,813 320,701 413,615 413,813" fill="#10C8C3" stroke="#10C8C3" stroke-width="2" stroke-linejoin="miter"/>
+  <!-- Sütun 2 (Orta-Sol) -->
+  <polygon class="logo-col-2" points="442,813 442,569 486,529 486,813" fill="#10C8C3" stroke="#10C8C3" stroke-width="2" stroke-linejoin="miter"/>
+  <!-- Sütun 3 (Merkez Kule) -->
+  <polygon class="logo-col-3" points="511,813 511,444 552,478 552,576 596,614 596,813" fill="#10C8C3" stroke="#10C8C3" stroke-width="2" stroke-linejoin="miter"/>
+  <!-- Sütun 4 (Sağ) -->
+  <polygon class="logo-col-4" points="614,813 614,644 690,706 690,813" fill="#10C8C3" stroke="#10C8C3" stroke-width="2" stroke-linejoin="miter"/>
+</svg>

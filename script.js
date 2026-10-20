@@ -20,8 +20,9 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     return;
   }
 
-  /* Aynı session'da tekrar oynamasın */
-  if (sessionStorage.getItem('intro_played')) {
+  /* Aynı session'da tekrar oynamasın (URL'de ?intro veya #intro varsa her zaman oynat) */
+  const forceIntro = window.location.search.includes('intro') || window.location.hash.includes('intro');
+  if (!forceIntro && sessionStorage.getItem('intro_played')) {
     overlay.classList.add('skip');
     return;
   }

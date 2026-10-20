@@ -19,22 +19,22 @@
   <!-- ══ INTRO OVERLAY ══ -->
   <div class="intro-overlay" id="introOverlay" aria-hidden="true">
     <div class="intro-svg-wrap">
-      <svg class="intro-svg" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
-        <!-- Diamond çerçeve -->
-        <polygon class="intro-diamond"
-          points="55,4 106,55 55,106 4,55"
-          fill="none" stroke="#10C8C3" stroke-width="1.2"/>
-        <!-- Yatay çizgi -->
-        <line class="intro-cross-h" x1="4" y1="55" x2="106" y2="55" stroke="#10C8C3"/>
-        <!-- Dikey çizgi -->
-        <line class="intro-cross-v" x1="55" y1="4" x2="55" y2="106" stroke="#10C8C3"/>
-        <!-- Merkez -->
-        <circle class="intro-center-dot" cx="55" cy="55" r="3.5" fill="#10C8C3"/>
+      <svg class="intro-svg" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <!-- Orijinal Çatı -->
+        <polygon class="intro-roof" points="511,231 946,794 788,764 511,388 234,764 58,794"/>
+        <!-- Sütun 1 (Sol) -->
+        <polygon class="intro-col intro-col-1" points="320,813 320,701 413,615 413,813"/>
+        <!-- Sütun 2 (Orta-Sol) -->
+        <polygon class="intro-col intro-col-2" points="442,813 442,569 486,529 486,813"/>
+        <!-- Sütun 3 (Merkez Kule) -->
+        <polygon class="intro-col intro-col-3" points="511,813 511,444 552,478 552,576 596,614 596,813"/>
+        <!-- Sütun 4 (Sağ) -->
+        <polygon class="intro-col intro-col-4" points="614,813 614,644 690,706 690,813"/>
       </svg>
       <div class="intro-sweep"></div>
     </div>
     <div class="intro-brand-wrap">
-      <strong class="intro-brand-name">ARIK YAPI</strong>
+      <img src="assets/logo-text-white.png" alt="ARIK YAPI" class="intro-brand-img">
       <small class="intro-brand-tag">Yapıdan değere, bugünden geleceğe.</small>
     </div>
   </div>
@@ -48,14 +48,14 @@
   <!-- ══ HEADER ══ -->
   <header class="site-header" id="siteHeader">
     <a class="brand" href="index.html" aria-label="Arık Yapı ana sayfa">
-      <svg class="brand-icon" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <polygon class="b-diamond" points="19,2 36,19 19,36 2,19"/>
-        <circle class="b-dot" cx="19" cy="19" r="3"/>
+      <svg class="brand-symbol-svg" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <polygon points="511,231 946,794 788,764 511,388 234,764 58,794" fill="#10C8C3"/>
+        <polygon points="320,813 320,701 413,615 413,813" fill="#10C8C3"/>
+        <polygon points="442,813 442,569 486,529 486,813" fill="#10C8C3"/>
+        <polygon points="511,813 511,444 552,478 552,576 596,614 596,813" fill="#10C8C3"/>
+        <polygon points="614,813 614,644 690,706 690,813" fill="#10C8C3"/>
       </svg>
-      <span class="brand-copy">
-        <strong>ARIK YAPI</strong>
-        <small>Yapıdan değere, bugünden geleceğe.</small>
-      </span>
+      <img src="assets/logo-text-white.png" alt="ARIK YAPI" class="brand-text-img">
     </a>
 
     <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false" id="menuToggle">
@@ -115,7 +115,13 @@
       <aside class="hero-glass-card" aria-label="Hizmet özeti">
         <div class="glass-card-header">
           <span>Hizmet Alanları</span>
-          <span class="glass-card-mark">A◆</span>
+          <svg class="brand-symbol-svg" style="width:26px;height:26px;" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="511,231 946,794 788,764 511,388 234,764 58,794" fill="#10C8C3"/>
+            <polygon points="320,813 320,701 413,615 413,813" fill="#10C8C3"/>
+            <polygon points="442,813 442,569 486,529 486,813" fill="#10C8C3"/>
+            <polygon points="511,813 511,444 552,478 552,576 596,614 596,813" fill="#10C8C3"/>
+            <polygon points="614,813 614,644 690,706 690,813" fill="#10C8C3"/>
+          </svg>
         </div>
 
         <div class="glass-service">
@@ -175,9 +181,11 @@
     <!-- ══ KURUMSAL ÖZET ══ -->
     <section class="about-section" id="kurumsal">
       <div class="about-visual reveal-left">
-        <div class="about-img-fallback" role="img" aria-label="Modern mimari yapı"></div>
+        <div class="logo-3d-showcase">
+          <img src="assets/logo-3d-premium.jpg" alt="Arık Yapı 3D Mimari Sembolü" class="logo-3d-img">
+        </div>
         <div class="about-badge">
-          <strong>Arık</strong>
+          <strong>ARIK</strong>
           <span>İşin sonunda</span>
         </div>
       </div>
@@ -281,14 +289,14 @@
   <footer class="site-footer" aria-label="Site alt bilgisi">
     <div class="footer-about">
       <a class="brand" href="index.html" aria-label="Arık Yapı">
-        <svg class="brand-icon" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon class="b-diamond" points="19,2 36,19 19,36 2,19"/>
-          <circle class="b-dot" cx="19" cy="19" r="3"/>
+        <svg class="brand-symbol-svg" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="511,231 946,794 788,764 511,388 234,764 58,794" fill="#10C8C3"/>
+          <polygon points="320,813 320,701 413,615 413,813" fill="#10C8C3"/>
+          <polygon points="442,813 442,569 486,529 486,813" fill="#10C8C3"/>
+          <polygon points="511,813 511,444 552,478 552,576 596,614 596,813" fill="#10C8C3"/>
+          <polygon points="614,813 614,644 690,706 690,813" fill="#10C8C3"/>
         </svg>
-        <span class="brand-copy">
-          <strong>ARIK YAPI</strong>
-          <small>Yapıdan değere, bugünden geleceğe.</small>
-        </span>
+        <img src="assets/logo-text-white.png" alt="ARIK YAPI" class="brand-text-img">
       </a>
       <p>İnşaat ve gayrimenkul alanlarında planlı, nitelikli ve profesyonel yaklaşım.</p>
     </div>
